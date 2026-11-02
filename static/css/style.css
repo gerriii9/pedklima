@@ -201,10 +201,14 @@ a { color: inherit; }
 @media (max-width: 999px) {
   .top__nav { display: none; }
   .top__side { margin-left: auto; }
-  .hero { grid-template-columns: 1fr; }
-  .hero__text { padding-bottom: 0; }
-  .hero__photo { min-height: 0; max-height: none; height: auto; aspect-ratio: 4 / 5; order: 3; }
-  .reviews { order: 2; margin-top: 0; padding-bottom: 0; }
+  .hero { grid-template-columns: minmax(0, 1fr); gap: 0; }
+  .hero__text { display: contents; }
+  .hero h1 { order: 1; }
+  .hero__photo { order: 2; min-height: 0; max-height: none; height: auto; aspect-ratio: 4 / 3; object-position: 50% 62%; margin-top: 20px; }
+  .hero__slogan { order: 3; margin-top: 24px; }
+  .hero__lead { order: 4; }
+  .actions { order: 5; }
+  .reviews { order: 6; margin-top: 36px; padding-bottom: 0; }
   .service, .service--flip, .clean, .contact, .band__head { grid-template-columns: 1fr; }
   .service--flip .service__photo { order: 0; }
 }
